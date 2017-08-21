@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>css的各种选择器</title>
+    <style>
+     /*div{
+      color:pink;
+    }*/
+    .font{
+      font-size: 40px;
+    }
+    #id{
+      color:red;
+    }
+    *{
+      /*取消所有的外边距*/
+      margin: 0;n
+    }
+    div p span {
+      color: red;
+    }
+    .one p span {
+      color: green;
+    }
+
+    #h2id p span {
+      color: yellow;
+    }
+
+    h1 p#p1 span {
+      color: yellow;
+    }
+
+    h3 span , h2 span {
+      color: yellow;
+    }
+
+    a:link{
+      color: black;
+    }
+
+    /* 鼠标悬停的效果*/
+    a:hover {
+      color: yellow;
+    }
+
+    /*激活状态，鼠标按下*/
+    a:active {
+      color: green;
+    }
+
+    /*访问过的链接*/
+    a:visited {
+      color: pink;
+    }
+
+    </style>
+
+  </head>
+  <body>
+    <div>hdsfh</div>   <!--标签选择器-->
+
+    <p class="font">sdfjlkjdf</p>　　　<!--类选择器-->
+
+    <p id="a"> jnsdfkljla </p>     <!--id选择器-->
+
+                                  <!--通配选择器  应用在了整个页面元素，不管什么标签-->
+
+    <div>
+      <p>  <span> div>p>span </span> </p>   <!--后代选择器 -->
+      <span>div > span </span>
+      <p>div > p</p>
+    </div>
+
+    <h1 class="one">
+      <p><span>  h1>p>span  </span></p>
+    </h1>
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　<!--后代选择器 　都能有后代-->
+    <h2 id="h2id">
+      <p><span>yyyyyyy</span></p>
+    </h2>
+
+    <h1>
+      <p id="p1"><span>ksjgkdjhkjhkhj</span></p>     <!--交集选择器 　连着写-->
+    </h1>
+
+    <h3><span>  h3>span  </span></h3>
+    <h2><span> h2>span  </span></h2>                 <!--并集选择器 　，隔开-->
+
+
+  　<a href="https:/www.tmall.com" target="_blank">跳转</a>　　　 <!--伪类选择器 -->
+
+
+  </body>
+  </html>

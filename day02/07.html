@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>css三大特性之一：继承</title>
+    <style>
+      .one{
+        color:red;
+      }
+      .two{
+        color:red;
+      }
+      .three{
+        height:400xp;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- 继承有局限性，文本相关的样式一般可以继承 -->
+
+    <div class="one">
+      jsakdlfj
+      <p>usadhf</p>
+    </div>
+
+    <div class="two">
+        <!--a的颜色无法继承  -->
+      <a href="#">a超链接</a>
+    </div>
+
+
+      <!--块级元素的宽度可以继承，但是高度不可以继承。如果继承，第一个就占满了，放不下其他的元素了-->
+    <div class="three">
+        <div>three的子元素</div>
+    </div>
+
+
+  </body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>尚合index</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      .w{
+        width: 980px;
+        margin: 0 auto;
+        position: relative;
+      }
+      a{
+        text-decoration: none;
+      }
+      ul{
+        list-style:none;
+      }
+      a:hover{
+        color: rgb(147, 200, 35);
+      }
+      .head{
+        height: 117px;
+        background-image: url("./shanghe/head_bg.png");
+        margin: auto;
+        position: relative;
+      }
+      .new{
+        width: 25px;
+        height: 20px;
+        position: absolute;
+        background: url("./shanghe/new.png") no-repeat;
+        left:120px;
+        top:60px;
+      }
+      .erweima{
+        width: 115px;
+        height: 113px;
+        position: absolute;
+        background: url("./shanghe/taobao.jpg") no-repeat;
+        left:1000px;
+        top:10px;
+      }
+      .head_top{
+        width: 980px;
+        height: 42px;
+        padding-top:18px;
+      }
+      .head_left{
+        width: 179px;
+        height: 24px;
+        background-image: url("./shanghe/logo.png");
+        float: left;
+      }
+      .head_right{
+        float: right;
+      }
+      .head_right .search_input{
+        width: 167px;
+        height: 30px;
+        background-image: url("./shanghe/input_r1_c1.png");
+        float: left;
+      }
+      .head_right .search_button{
+        width: 33px;
+        height: 30px;
+        background-image: url("./shanghe/input_r1_c2.png");
+        float: left;
+      }
+      .head_bottom{
+        padding: 0 15px;
+
+      }
+      .head_bottom a{
+        display: inline-block;
+        height: 55px;
+        line-height: 55px;
+        padding: 0 25px;
+        font: 14px;
+        color: #000;
+        float: left;
+      }
+      .xian{
+        width: 1px;
+        height: 54px;
+        background-image: url("./shanghe/nav_bg.png");
+        float: left;
+      }
+      .head_bottom a:hover{
+        color: rgb(147, 200, 35);
+      }
+      .point{
+        width: 34px;
+        height: 14px;
+        margin: 10px auto;
+        background: url("./shanghe/point.png") no-repeat;
+      }
+      .gonggao{
+        height: 30px;
+        background-color: rgb(250,250,250);
+        border-top: 1px solid rgb(220,220,220);
+        border-bottom: 1px solid rgb(220,220,220);
+      }
+      .gonggao_left{
+        float: left;
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+      }
+      .gonggao_right{
+        float: right;
+        padding-top: 7px;
+      }
+
+      .botton{
+        border: 1px solid rgb(220,220,220);
+        float: left;
+        height: 200px;
+        margin: 20px 0 40px;
+        padding: 10px;
+
+      }
+      .botton_left{
+        width: 290px;
+        margin-right: 20px;
+      }
+      .botton_center{
+        width: 360px;
+        margin-right: 20px;
+      }
+      .botton_right{
+        width: 220px;
+      }
+      .botton_title{
+        height: 20px;
+        line-height: 20px;
+        color:rgb(147, 200, 35);
+        margin-top: 5px;
+        padding-left: 25px;
+        background: url("./shanghe/canvas_r4_c4.png") no-repeat 3px 3px;
+      }
+      .botton_left_content{
+        width: 272px;
+        height: 150px;
+        padding-left:10px;
+      }
+      .botton_content{
+        padding: 10px 20px;
+        font-size: 12px;
+      }
+      <h6>{
+        color: red;
+      }
+
+      .botton_center li{
+        height: 30px;
+        line-height: 30px;
+        border-bottom: 1px dashed rgb(220,220,220);
+
+      }
+      li a{
+        color: rgb(100,100,100);
+        font-size: 14px;
+      }
+      .botton_right li{
+        width: 100px;
+        height: 20px;
+        line-height: 20px;
+        border-left: 4px solid rgb(147, 200, 35);
+        padding-left: 10px;
+        margin: 10px 0;new.png
+
+      }
+      .clearfix::after {div
+        visibility: hidden;
+        clear: both;
+        display: block;
+        content: ".";
+        height: 0;
+      }
+
+      .clearfix {
+        *zoom: 1;
+      }
+      .foot{
+        height: 305px;
+        background-image: url("./shanghe/foot.png");
+        position: relative;
+      }
+      .foot ul{
+        margin: 30px;
+        float: left;new.png
+      }
+      div.foot li{
+        font-size: 12px;
+        color: #fff;
+        padding: 5px 0;
+      }
+      .foot li a{
+        font-size:10px;
+        color:rgb(150,150,150);
+      }
+      .toptb{
+        width: 51px;
+        height: 27px;
+        position: absolute;
+        background: url("./shanghe/canvas_r4_c3.png") no-repeat;
+        left:980px;
+        top:2px;
+      }
+      .banquan{
+        width: 800px;
+        padding-top: 230px;
+        font-size: 10px;
+        margin: auto;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="head">
+      <div class="w">
+        <div class="head_top">
+          <div class="head_left">
+          </div>
+          <div class="head_right">
+            <div class="search_input">
+            </div>
+            <div class="search_button">
+            </div>
+          </div>
+        </div>
+        <div class="head_bottom">
+          <div class="new">
+          </div>
+          <a href="#">首&nbsp;页</a>
+          <div class="xian"></div>
+          <a href="#">智能手机</a>
+          <div class="xian"></div>
+          <a href="#">平板电脑</a>
+          <div class="xian"></div>
+          <a href="#">配件</a>
+          <div class="xian"></div>
+          <a href="#">服务支持</a>
+          <div class="xian"></div>
+          <a href="#">关于尚合</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="w">
+      <img src="./shanghe/banner.png" alt="找不到图片">
+      <div class="point">
+      </div>
+      <div class="erweima">
+      </div>
+    </div>
+
+    <div class="gonggao">
+      <div class="w">
+        <div class="gonggao_left">
+          <strong>最新公告：</strong>
+          &nbsp;尚合智能手机入网证已经获公信部门审批下发。尚合官方
+        </div>
+        <div class="gonggao_right">
+          <img src="./shanghe/share.png">
+        </div>
+      </div>
+    </div>
+
+    <div class="w clearfix">
+        <div class="botton botton_left">
+          <div class="botton_title">
+            <h5>新品发布</h5>
+          </div>
+          <div class="botton_left_content">
+            <img src="./shanghe/shouji.png">
+          </div>
+        </div>
+        <div class="botton botton_center">
+          <div class="botton_title">
+            <h5>新闻中心</h5>
+          </div>
+            <ul class="botton_content">
+              <li><h6>致歉公告</h6></li>
+              <li><a href="#">首批尚合已全部售罄</a></li>
+              <li><a href="#">我司产品已通过国家强制性产品认证</a></li>
+              <li><a href="#">尚合智能手机已经获公信部门审批下发</a></li>
+              <li><a href="#">首批尚合已全部售罄</a></li>
+            </ul>
+        </div>
+        <div class="botton botton_right">
+          <div class="botton_title">
+            <h5>技术与支持</h5>
+          </div>
+          <div class="botton_content">
+            <ul>
+              <li><a href="#">售后服务</a></li>
+              <li><a href="#">售后服务</a></li>
+              <li><a href="#">联保网点</a></li>
+              <li><a href="#">常见问题？</a></li>
+            </ul>
+            深圳市汇聚众合科技发展有限公司<br>
+                服务热线:400-233-3454
+          </div>
+        </div>
+    </div>
+
+    <div class="foot">
+      <div class="w">
+        <div class="toptb">
+        </div>
+        <ul>
+          <li>尚合首页</li>
+          <li><a href="#">返回首页</a></li>
+        </ul>
+        <ul>
+          <li>智能手机</li>
+          <li><a href="#">Acone</a></li>
+          <li><a href="#">Acone-智能手机</a></li>
+        </ul>
+        <ul>
+          <li>平板电脑</li>
+          <li><a href="#">尚合 8200</a></li>
+          <li><a href="#">尚合 8100</a></li>
+          <li><a href="#">尚合 n8600</a></li>
+        </ul>
+      </div>
+      <div class="banquan">
+        版权归李莉所有　　　请勿侵权　　哎呀呀雅雅雅雅雅啊呀雅的身份和萨克大黄蜂阿三激发<br>
+        时代科技和方式看大家父级
+      </div>
+    </div>
+  </body>
+</html>

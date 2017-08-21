@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>京东</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      ul li{
+        list-style: none;
+      }
+      a{
+        text-decoration: none;
+      }
+      .w{
+        width: 1200px;
+        margin: auto;
+        position: relative;
+      }
+      body{
+        background-color: rgb(250,248,248);
+      }
+      .top{
+        height: 78px;
+        margin: auto;
+        background: url("./jingdong/top.png") no-repeat;
+      }
+      .head{
+
+      }
+      .logo{
+        width: 188px;
+        height: 168px;
+        background: url("./jingdong/logo.png") -1px 0;
+        position: absolute;
+
+      }
+      .head_top{
+        height: 30px;
+        background-color: rgb(238,238,240);
+        border-bottom: 1px solid rgb(200,200,200);
+      }
+      .head_top_left{
+        margin-left: 230px;
+        color: rgb(170,170,170);
+        font-size: 10px;
+        height: 30px;
+        line-height: 30px;
+        float: left;
+        position: relative;
+      }
+      .dizhi{
+        width: 13px;
+        height: 17px;
+        background-image: url("./jingdong/dizhi.png");
+        position: absolute;
+        left:-15px;
+        top:6px;
+      }
+      .head_top_right{
+        height: 30px;
+        line-height: 30px;
+        float: right;
+        font-size: 6px;
+        color: rgb(170,170,170);
+      }
+      .head_top_right a{
+        color: rgb(170,170,170);
+        font-size: 6px;
+        padding: 0 10px;
+        border-right: 1px solid rgb(170,170,170);
+      }
+      .head_top_right a:hover{
+        color: red;
+      }
+
+      .w .head_center_right{
+        width: 870px;
+        float: right;
+        padding-top: 30px;
+      }
+      .head_center_serch{
+        width: 560px;
+        height: 35;
+        float: left;
+        margin-right: 30px;
+      }
+      .search_input{
+        border: 1px red solid;
+        background-color: white;
+        width: 500px;
+        height: 28px;
+        float: left;
+        text-align: right;
+        padding-top: 7px;
+      }
+      .search_button{
+        width: 55px;
+        height: 37px;
+        background-color: red;
+        float: left;
+      }
+      .head_center_car{
+        width: 100px;
+        height: 22px;
+        line-height: 22px;
+        padding: 6px 30px;
+        border: 1px solid rgb(200,200,200);
+        background-color: white;
+        color: red;
+        float: left;
+        font-size: 10px;
+        position: relative;
+      }
+      .xiao0{
+        width: 21px;
+        height: 17px;
+        background-image: url("./jingdong/0.png");
+        position: absolute;
+        left: 115px;
+        top: 2px;
+      }
+      .w .erweima{
+        position: absolute;
+        left: 1130px;
+        top:1px;
+        width: 68px;
+        height: 63px;
+        background-image: url("./jingdong/erweima.png");
+      }
+      .head_center_zi{
+        float: right;
+        width: 870px;
+        height: 35px;
+      }
+      .head_center_zi a {
+        font-size: 10px;
+        color: rgb(170,170,170);
+        margin: 10px 10px 10px 0;
+        float: left;
+      }
+      .head_center_zi a:hover{
+        color: red;
+      }
+      .clearfix::after {div
+        visibility: hidden;
+        clear: both;
+        display: block;
+        content: ".";
+        height: 0;
+      }
+
+      .clearfix {
+        *zoom: 1;
+      }
+      .head_bottom{
+        padding-top: 120px;
+        margin-left: 220px;
+      }
+      ul.head_bottom_left a{
+        padding: 0 20px;
+        float: left;
+        color: #555;
+
+      }
+      ul.head_bottom_left a:hover{
+        color: red;
+      }
+      .head_bottom_right{
+        float: right;
+        background: url("./jingdong/shoujiri.png");
+        width: 187px;
+        height: 35px;
+      }
+      .box_left{
+        height: 435px;
+        width: 170px;
+        margin-right: 15px;
+        padding: 20px 10px;
+        background-color: #6a6164;
+        color: white;
+        float: left;
+      }
+      .box_left li{
+        padding: 5px;
+      }
+      .box_left a{
+        color: #fff;
+        font-size: 13px;
+        padding: 0 5px;
+      }
+      .box_left a:hover{
+        color: red;
+      }
+      .box_center{
+        width: 790px;
+        height: 475px;
+        margin-right: 15px;
+        background: url("./jingdong/bunner.png") no-repeat;
+        float: left;
+      }
+      .box_right{
+        width: 190px;
+        float: left;
+      }
+      .box_right_top{
+        background-color: white;
+        padding: 20px 15px;
+        width: 160px;
+        height: 90px;
+      }
+      .right_top_login{
+        height: 50px;
+        background: url("./jingdong/mao.png") no-repeat;
+        padding-left: 60px;
+        color: #888;
+        font-size: 12px;
+      }
+      .right_top_login a{
+        color: #888;
+        font-size: 12px;
+      }
+      .right_top_login a:hover{
+        color: red;
+      }
+      .right_top_fuli{
+        margin-top: 20px;
+      }
+      .right_top_fuli a{
+        display:inline-block;
+        width: 65px;
+        height: 20px;
+        border: 2px red solid;
+        text-align: center;
+        margin-right: 10px;
+        color: red;
+        font-size: 12px;
+        float: left;
+      }
+      .right_center_top {
+        width:190;
+        height: 25px;
+        line-height: 25px;
+        font-size: 10px;
+      }
+      .box_right_center{
+        background-color: white;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        padding: 5px 15px;
+      }
+      .right_center_top{
+        border-bottom: 1px solid #ccc;
+        height: 20px;
+      }
+      .right_center_top h5{
+        display: inline-block;
+        height: 20px;
+        color: #777;
+        float: left;
+        padding: 0 10px;
+      }
+      .right_center_top a{
+        color: #888;
+        float: right;
+      }
+      .right_center_top a:hover{
+        color: red;
+      }
+      .right_center_bottom{
+        padding: 10px 10px 0 10px;
+      }
+      .right_center_bottom li{
+        padding-bottom: 6px;
+      }
+      .right_center_bottom a{
+        color: #999;
+        font-size: 10px;
+      }
+      .right_center_bottom a:hover{
+        color: red;
+      }
+      td{
+        border: 1px solid;
+        text-align: center;
+        height: 67px;
+        border-color: rgb(240,240,240);
+        font-size: 10px;
+        color: #666;
+      }
+      table{
+        width: 190px;
+        border-spacing: 0px;
+        border-collapse: separate;
+        background-color: white;
+      }
+      .jinglintu{
+        width: 23px;
+        height: 22px;
+        margin: auto;
+      }
+      .jinglintu1 {
+        background: url("./jingdong/sprite.png") -0px -88px;
+      }
+      .jinglintu2 {
+        background: url("./jingdong/sprite.png") -0px -46px;
+      }
+      .jinglintu3 {
+        background: url("./jingdong/sprite.png") -44px -88px;
+      }
+      .jinglintu4 {
+        background: url("./jingdong/sprite.png") -88px -0px;
+      }
+      .jinglintu5 {
+        background: url("./jingdong/sprite.png") -88px -46px;
+      }
+      .jinglintu6 {
+        background: url("./jingdong/sprite.png") -0px -0px;
+      }
+      .jinglintu7 {
+        background: url("./jingdong/sprite.png") -44px -46px;
+      }
+      .jinglintu8 {
+        background: url("./jingdong/sprite.png") -88px -88px;
+      }
+      .jinglintu9 {
+        background: url("./jingdong/sprite.png") -132px -0px;
+      }
+      .jinglintu10 {
+        background: url("./jingdong/sprite.png") -132px -46px;
+      }
+      .jinglintu11 {
+        background: url("./jingdong/sprite.png") -132px -90px;
+      }
+      .jinglintu12 {
+        background: url("./jingdong/sprite.png") -44px -0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top"></div>
+
+    <div class="head clearfix">
+      <div class="head_top">
+        <div class="w">
+          <div class="logo">
+          </div>
+          <div class="head_top_left">
+            北京
+            <div class="dizhi">
+            </div>
+          </div>
+          <div class="head_top_right">
+            你好，请登录
+            <a href="#" style="color:red;">免费注册</a>
+            <a href="#">我的订单</a>
+            <a href="#">我的京东</a>
+            <a href="#">京东会员</a>
+            <a href="#">企业采购</a>
+            <a href="#">客户服务</a>
+            <a href="#">网站导航</a>
+            <a href="#">手机京东</a>
+          </div>
+        </div>
+      </div>
+      <div class="w">
+      <div class="head_center_right">
+          <div class="head_center_serch">
+            <div class="search_input">
+              <img src="./jingdong/camara.png">
+            </div>
+            <div class="search_button">
+            </div>
+          </div>
+          <div class="head_center_car">
+            <img src="./jingdong/car.png">
+            我的购物车
+            <div class="xiao0">
+            </div>
+          </div>
+          <div class="erweima">
+          </div>
+      </div>
+      <ul class="head_center_zi">
+        <li><a href="#" style="color:red;">一元秒电脑</a></li>
+        <li><a href="#">平板电脑节</a></li>
+        <li><a href="#">农资周年庆</a></li>
+        <li><a href="#">七夕聚会</a></li>
+        <li><a href="#">低至五折</a></li>
+        <li><a href="#">花洒套装</a></li>
+      </ul>
+      </div>
+      <div class="w">
+      <div class="head_bottom">
+        <ul class="head_bottom_left">
+          <li><a href="#"><h4>秒杀</h4></a></li>
+          <li><a href="#"><h4>优惠券</h4></a></li>
+          <li><a href="#"><h4>闪购</h4></a></li>
+          <li><a href="#"><h4>拍卖</h4></a></li>
+          <li><a href="#"><h4>服装城</h4></a></li>
+          <li><a href="#"><h4>京东超市</h4></a></li>
+          <li><a href="#"><h4>生鲜</h4></a></li>
+          <li><a href="#"><h4>全球购</h4></a></li>
+        </ul>
+        <div class="head_bottom_right">
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="w">
+      <div class="box_left">
+        <ul>
+          <li><a href="#">家用电器</a></li>
+          <li><a href="#">手机</a>/<a href="#">运营商</a>/<a href="#">数码产品</a></li>
+          <li><a href="#">电脑</a>/<a href="#">办公</a></li>
+          <li><a href="#">家具</a>/<a href="#">家居</a>/<a href="#">家装</a>/<a href="#">厨具</a></li>
+          <li><a href="#">男装</a>/<a href="#">童装</a>/<a href="#">内衣</a></li>
+          <li><a href="#">男鞋</a>/<a href="#">运动</a>/<a href="#">户外</a></li>
+          <li><a href="#">电子书</a>/<a href="#">音箱</a>/<a href="#">图书</a></li>
+          <li><a href="#">机票</a>/<a href="#">酒店</a>/<a href="#">旅游</a></li>
+          <li><a href="#">手机</a>/<a href="#">运营商</a>/<a href="#">数码产品</a></li>
+          <li><a href="#">食品</a>/<a href="#">酒类</a>/<a href="#">特产</a></li>
+          <li><a href="#">童装</a>/<a href="#">玩具</a>/<a href="#">母婴</a></li>
+          <li><a href="#">汽车</a>/<a href="#">玩具</a>/<a href="#">乐器</a></li>
+          <li><a href="#">美装</a>/<a href="#">宠物</a></li>
+          <li><a href="#">家具</a>/<a href="#">家居</a>/<a href="#">家装</a>/<a href="#">厨具</a></li>
+          <li><a href="#">男装</a>/<a href="#">童装</a>/<a href="#">内衣</a></li>
+        </ul>
+      </div>
+      <div class="box_center">
+      </div>
+      <div class="box_right">
+        <div class="box_right_top">
+          <div class="right_top_login">
+            Hi，欢迎来到京东<br>
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+          </div>
+          <div class="right_top_fuli">
+            <a href="#">新人福利</a>
+            <a href="#">PLUS会员</a>
+          </div>
+        </div>
+        <div class="box_right_center">
+          <div class="right_center_top">
+            <h5 style="border-bottom: red 2px solid;
+                      border-right: #aaa 1px solid;">促销</h5>
+            <h5>公告</h5>
+            <a href="#">更多</a>
+          </div>
+          <ul class="right_center_bottom">
+            <li><a href="#">疯狂星期五，２件起五折</a></li>
+            <li><a href="#">七夕购鲜花赢生日会门票</a></li>
+            <li><a href="#">虾蟹一锅，８折</a></li>
+            <li><a href="#">每日享折扣，京东品质游</a></li>
+          </ul>
+        </div>
+        <div class="box_right_bottom">
+          <table>
+            <tr>
+              <td><div class="jinglintu jinglintu1"></div>话费</td>
+              <td><div class="jinglintu jinglintu2"></div>机票</td>
+              <td><div class="jinglintu jinglintu3"></div>酒店</td>
+              <td><div class="jinglintu jinglintu4"></div>游戏</td>
+            </tr>
+            <t>
+              <td><div class="jinglintu jinglintu5"></div>企业购</td>
+              <td><div class="jinglintu6 jinglintu"></div>加油卡</td>
+              <td><div class="jinglintu7 jinglintu"></div>电影票</td>
+              <td><div class="jinglintu8 jinglintu"></div>火车票</td>
+            </tr>
+            <tr>
+              <td><div class="jinglintu9 jinglintu"></div>众筹</td>
+              <td><div class="jinglintu10 jinglintu"></div>理财</td>
+              <td><div class="jinglintu11 jinglintu"></div>礼品卡</td>
+              <td><div class="jinglintu12 jinglintu"></div>白条</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
