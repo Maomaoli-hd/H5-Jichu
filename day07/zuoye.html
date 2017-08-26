@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>关于制作一个数据表格，有添加删除操作</title>
+    <style>
+      .zong{
+        width: 360px;
+        margin: auto;
+      }
+      table{
+        border-collapse: 0;
+        border-spacing: 0;
+        border: 1px solid;
+      }
+      table td{
+        height: 30px;
+        width: 90px;
+        text-align: center;
+        border: 1px solid;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="zong">
+      <div>
+        <button id=p1>添加</button>
+
+      </div>
+      <table>
+        <tr>
+          <td>name</td>
+          <td>gender</td>
+          <td>age</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>lisi</td>
+          <td>30</td>
+          <td>男</td>
+          <td><button class=del>删除</button></td>
+        </tr>
+      </table>
+    </div>
+
+    <script src="./jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+
+      function add(){
+        $("table").append("<tr><td>zhangsan</td><td>27</td><td>男</td><td><button class=del>删除</button></td></tr>");
+
+        function del(){
+           $(this).parents("tr").remove();
+           console.log("shan");
+         }
+        $(".del").click(del);             //delete必须放在里边，让每触发一次添加就要重新注册一次删除，否则页面第一次刷新
+        　　　　　　　　　　　　　　　　　　　　//就同时注册了添加和删除，且只注册一次，此时删除只有页面一开始时的。所以后添加的就无法删除。
+      }
+      $("#p1").click(add);
+
+    </script>
+  </body>
+</html>

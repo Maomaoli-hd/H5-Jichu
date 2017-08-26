@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>各种事件</title>
+    <style>
+      .one{
+        width:20px;
+        height:20px;
+        background-color:red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one"></div>
+
+    <script src="../jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(".one").click(function(){
+        $(".one").css("background-color","yellow");  //单击事件
+      });
+
+      $(".one").dblclick(function(){
+        $(".one").css("background-color","green");　　//双击事件
+      });
+
+      $(document).contextmenu({     　　　　　　　　　　 //右键单击事件　　　document是整个页面。　
+        console.log("鼠标右键单击");
+      });
+
+      /*
+      //鼠标悬停的事件
+      $(".one").mouseover(function(){
+        $(".one").css("background-color", "blue");
+      });
+
+      //鼠标离开的事件
+      $(".one").mouseout(function(){
+        $(".one").css("background-color", "red");
+      });
+
+      //链式调用
+      $(".one").mouseover(function(){
+        $(".one").css("background-color", "blue");
+      }).mouseout(function(){
+        $(".one").css("background-color", "red");　　　　　　//鼠标悬停和离开事件
+      });
+
+      hover相当于 mouseout mouseover合体
+      根据实际需求传入处理函数,可以使用null代替空函数
+      */
+      $(".one").hover(function(){
+        $(".one").css("background-color", "blue");　　　　
+      }, function(){
+        $(".one").css("background-color", "red");　　　　　　//Hover代替了两种事件，悬停加离开
+      });
+
+
+
+      $(document).keydown(function(){　　　　　　　　　　　　　//keydown识别所有的
+        console.log("按下了");
+      });
+      /*
+      $(document).keypress(function(){　　　　　　　　　　　　//keypress识别 字母数字键
+        console.log("按下了");
+      });
+      */
+
+      $(document).keyup(function(e){　　　　　　　　　　　　　//keyup弹起事件
+        console.log("弹起了： "  + e.which);　　　　　　　　　//which返回按下的建的编号
+      });
+
+      
+    </script>
+  </body>
+</html>

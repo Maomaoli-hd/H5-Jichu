@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>层级选择器</title>
+  </head>
+  <body>
+
+    <div class="one">  第一个div </div>
+    <ul id="p">
+      <li>12</li>
+      <li>13</li>
+    </ul>
+
+    <div class="three">
+      <div class="three_s">111</div>
+      <div class="three_s">
+        222
+        <div>three的孙子元素</div>
+      </div>
+    </div>
+
+    <div class="four">2</div>
+    <p>2222</p>
+    <div>3</div>
+    <div>4</div>
+
+    <script src="./jquery.min.js"></script>
+    <script type="text/javascript">
+
+//跟之前一样的，只不过$表示jquery,里边放选择器即可
+      $(".one").css("color","red");
+      $("#p").css("color","blue");
+
+      $("div > .three_s").css("color","green");   //子选择器　>  ?????只能选择向下的一层，而孙子辈的不能选择。
+      　　　　　　　　　　　　　　　　　　　　　　　　　//当然，字体颜色和大小都是可继承的,所以孙辈的有效果，从不能继承的border可以看出本例特点。
+      $(".three > div").css("font-size","40px");
+      $(".three > div").css("border", "1px solid red");
+
+      $(".four + p").css("color","pink");  //相邻的下一个符合条件的同级选择器，用‘＋’连接
+      $(".four ~ div").css("color","blue"); //它之后的符合条件的同级选择器　用‘～’连接
+    </script>
+
+
+  </body>
+</html>

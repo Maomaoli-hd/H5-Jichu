@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>小米</title>
+    <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    li{
+      list-style: none;
+    }
+    a{
+      text-decoration: none;
+    }
+    .w{
+      width: 1225px;
+      margin: auto;
+    }
+    .clearfix::before,
+    .clearfix::after {
+      clear: both;
+      display: block;
+      content: " ";
+    }
+
+    .top {
+      height: 40px;
+      background: #333333;
+    }
+    .top .left,
+    .top .right{
+      height: 40px;
+      line-height: 40px;
+    }
+    .top .left {
+      float: left;
+    }
+    .top .right {
+      float: right;
+    }
+    .top a {
+      color: #bbb;
+      font-size: 10px;
+      border-right: 1px solid #333;
+    }
+    .top a:hover {
+      color: #fff;
+    }
+    .top span{
+      color:#505050;
+      margin: 0.5em;
+      font-size: 12px;
+    }
+    .right a.gw{
+      margin-left: 15px;
+      background-color: #444;
+      width: 120px;
+      height: 38px;
+      display: inline-block;
+      text-align: center;
+    }
+    .head .left{
+      margin-top: 25px;
+      width: 250px;
+      height: 54px;
+      float: left;
+      background: url("./img/xmlogo.png") no-repeat;
+
+    }
+    .center li a{
+      height: 100px;
+      line-height: 100px;
+      font-size: 16px;
+      margin-right: 20px;
+      margin-top: 6px;
+      float: left;
+      color: #000;
+    }
+    .center li a:hover{
+      color: rgb(235, 111, 50);
+    }
+    .right{
+      float: right;
+      position: relative;
+    }
+    .head .right input{
+      margin: 30px 0 30px 40px;
+      border: 1px solid #ddd;
+      width: 225px;
+      height: 48px;
+      float: left;
+    }
+    .right .xiala{
+      position: absolute;
+      top:79px;
+      left:40px;
+      border: 1px solid rgb(247, 116, 52);
+      width: 225px;
+      font-size: 12px;
+      color: #333;
+      visibility: hidden;
+      background-color: white;
+      z-index: 2;
+    }
+    .right .xiala li{
+      height: 15px;
+      padding: 6px 15px;
+    }
+    .xiala li .left{
+      float: left;
+    }
+    .xiala li .right{
+      float: right;
+      color: #aaa;
+      font-size: 8px;
+    }
+    .head .right button{
+      margin: 30px 0 0 -1px;
+      border: 1px solid #ddd;
+      width: 50px;
+      height: 50px;
+      float: left;
+      background-color: white;
+    }
+    .head .right button:hover{
+      background-color: rgb(247, 116, 52);
+      border: 1px solid rgb(247, 116, 52);
+    }
+    .hero{
+      position: relative;
+    }
+    .w .xiala2{
+      background-color: white;
+      margin: 0 auto;
+      padding-top: 30px;
+      height: 230px;
+      width: 1225px;
+      position: absolute;
+      top:0;
+      z-index: 2;
+      border-top: 1px solid #ddd;
+      visibility: hidden;
+    }
+    .xiala2 li{
+      float: left;
+      padding: 0 60px;
+      border-right: 1px solid #ddd;
+    }
+    .hero_top .left{
+      width: 230px;
+      height: 460px;
+      background-color: rgb(24, 30, 55);
+      height: auto;
+      float: left;
+      padding: 15px 0;
+    }
+    .hero_top .left li{
+      height: 43px;
+      line-height: 43px;
+      padding-left: 30px;
+      color: white;
+      font-size: 14px;
+    }
+    .hero_top .right{
+      background: url("./img/hero.png");
+      width: 990px;
+      height: 460px;
+      float: left;
+    }
+    .hero_buttom{
+      margin-top: 16px;
+    }
+    .hero_buttom_left{
+      float: left;
+      margin-right: 14px;
+      width: 202px;
+      height: 130px;
+      padding: 20px 15px;
+      background-color: rgb(92, 88, 85);
+    }
+    .hero_buttom .xiaotu{
+      float: left;
+      margin-right: 15px;
+    }
+    td{
+      text-align: center;
+      height: 63px;
+      width: 45px;
+    }
+    td a{
+      font-size: 10px;
+      color: #aaa;
+    }
+    td a:hover{
+      font-size: 10px;
+      color: #fff;
+    }
+    table{
+      width: 200px;
+      border-spacing: 0px;
+      border-collapse: 0;
+    }
+    .jinglintu{
+      width: 23px;
+      height: 22px;
+      margin: auto;
+    }
+    .jinglintu1 {
+      background: url("./img/sprite.png") -0px -88px;
+    }
+    .jinglintu2 {
+      background: url("./img/sprite.png") -0px -46px;
+    }
+    .jinglintu3 {
+      background: url("./img/sprite.png") -44px -88px;
+    }
+    .jinglintu5 {
+      background: url("./img/sprite.png") -88px -46px;
+    }
+    .jinglintu6 {
+      background: url("./img/sprite.png") -0px -0px;
+    }
+    .jinglintu7 {
+      background: url("./img/sprite.png") -44px -46px;
+    }
+    .left h3{
+    float: right;
+    margin-right: 15px;
+    color: #aaa;
+    }
+    .danping{
+      margin-top: 30px;
+    }
+    .danping_g{
+      width: 232px;
+      height: 344px;
+      margin: 10px 13px 0 0;
+      background-image: url("./img/bottom.png");
+      float: left;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <div class="w">
+        <div class="left">
+          <a href="#">小米商城</a><span>|</span>
+          <a href="#">MIUI</a><span>|</span>
+          <a href="#">米聊</a><span>|</span>
+          <a href="#">游戏</a><span>|</span>
+          <a href="#">多看阅读</a><span>|</span>
+          <a href="#">云服务</a><span>|</span>
+          <a href="#">金融</a><span>|</span>
+          <a href="#">小米商城手机版</a><span>|</span>
+          <a href="#">问题反馈</a><span>|</span>
+          <a href="#">Select Region</a>
+        </div>
+        <div class="right">
+          <a href="#">登录</a><span>|</span>
+          <a href="#">注册</a><span>|</span>
+          <a href="#">消息通知</a>
+          <a href="#" class="gw">购物车(0)</a>
+        </div>
+      </div>
+    </div>
+    <div class="head w clearfix">
+      <div class="left"></div>
+      <ul class="center">
+        <li><a href="#">小米手机</a></li>
+        <li><a href="#">红米</a></li>
+        <li><a href="#">平板笔记本</a></li>
+        <li><a href="#">电视</a></li>
+        <li><a href="#">盒子影音</a></li>
+        <li><a href="#">路由器</a></li>
+        <li><a href="#">智能硬件</a></li>
+        <li><a href="#">服务</a></li>
+        <li><a href="#">社区</a></li>
+      </ul>
+      <div class="right">
+        <input type="text" name="sou" value="">
+        <button type="button" name="sousuo"></button>
+        <ul class="xiala">
+          <li><span　class="left">小米手机</span>
+            <span class="right">约有６件</span></li>
+          <li><span　class="left">小米</span>
+            <span class="right">约有7件</span></li>
+          <li><span　class="left">红米note</span>
+            <span class="right">约有9件</span></li>
+          <li><span　class="left">小米ＭＡＸ</span>
+            <span class="right">约有６件</span></li>
+          <li><span　class="left">小米手机</span>
+            <span class="right">约有8件</span></li>
+          <li><span　class="left">耳机</span>
+            <span class="right">约有4件</span></li>
+          <li><span　class="left">小米ＭＡＸ</span>
+            <span class="right">约有６件</span></li>
+          <li><span　class="left">电池</span>
+            <span class="right">约有8件</span></li>
+          <li><span　class="left">充电宝</span>
+            <span class="right">约有4件</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="hero w">
+      <div class="xiala2">
+        <ul>
+          <li><img src="./img/max2_toubu.png" alt=""></li>
+          <li><img src="./img/xiaomiNOTE2-320-220!160x110.jpg" alt=""></li>
+          <li><img src="./img/max2_toubu.png" alt=""></li>
+        </ul>
+      </div>
+      <div class="hero_top clearfix">
+        <div class="left">
+          <ul>
+            <li>手机&nbsp;电话卡<h3>></h3></li>
+            <li>笔记本 &nbsp;平板<h3>></h3></li>
+            <li>电视盒子<h3>></h3></li>
+            <li>路由器&nbsp;智能硬件<h3>></h3></li>
+            <li>移动电源&nbsp;插线板<h3>></h3></li>
+            <li>耳机&nbsp;音箱<h3>></h3></li>
+            <li>保护套&nbsp;贴膜<h3>></h3></li>
+            <li>线材&nbsp;支架<h3>></h3></li>
+            <li>箱包&nbsp;服饰&nbsp;鞋<h3>></h3></li>
+            <li>生活周边<h3>></h3></li>
+          </ul>
+        </div>
+        <div class="right">
+        </div>
+      </div>
+      <div class="hero_buttom clearfix">
+        <div class="hero_buttom_left">
+          <table>
+            <tr>
+              <td style="border-right: 1px solid rgb(102, 98, 95);border-bottom: 1px solid rgb(102, 98, 95);"><div class="jinglintu jinglintu1"></div><a href="#">选购手机</a></td>
+              <td style="border-right: 1px solid rgb(102, 98, 95);border-bottom: 1px solid rgb(102, 98, 95);"><div class="jinglintu jinglintu2"></div><a href="#">企业团购</a></td>
+              <td style="border-bottom: 1px solid rgb(102, 98, 95);"><div class="jinglintu jinglintu3"></div><a href="#">Ｆ码通道</a></td>
+            </tr>
+            <t>
+              <td style="border-right: 1px solid rgb(102, 98, 95);"><div class="jinglintu jinglintu5"></div><a href="#">米粉卡</a></td>
+              <td style="border-right: 1px solid rgb(102, 98, 95);"><div class="jinglintu6 jinglintu"></div><a href="#">以旧换新</a></td>
+              <td ><div class="jinglintu7 jinglintu"></div><a href="#">话费充值</a></td>
+            </tr>
+          </table>
+        </div>
+        <span class="xiaotu"><img src="./img/1.png" alt=""></span>
+        <span class="xiaotu"><img src="./img/2.png" alt=""></span>
+        <span style="float:left"><img src="./img/3.png" alt=""></span>
+      </div>
+    </div>
+    <div class="danping w">
+      <h2>小米明星单品</h2>
+      <div class="danping_g">
+      </div>
+      <div class="danping_g">
+      </div>
+      <div class="danping_g">
+      </div>
+      <div class="danping_g">
+      </div>
+      <div class="danping_g">
+      </div>
+    </div>
+
+    <script src="./jquery.min.js" charset="utf-8"></script>
+    <script>
+      $(".left li").hover(function(){
+        $(this).css("background-color","rgb(247, 116, 52)");
+      },function(){
+        $(this).css("background-color","rgb(24, 30, 55)");
+      });
+      $(".right input").focus(function(){
+        $(".right button").css("border","1px solid rgb(247, 116, 52)");
+        $(".right input").css({
+          "border":"1px solid rgb(247, 116, 52)",
+          "position":"relative",
+          "z-index":"2"
+        });
+        $("ul.xiala").css("visibility","visible");
+        $("ul.xiala li").hover(function(){
+          $(this).css("background-color","rgb(226, 220, 217)")
+        },
+        function(){
+          $(this).css("background-color","white")
+        })
+      });
+      $(".right input").blur(function(){
+        $(".right button").css(
+          "border","1px solid #ddd");
+        $(".right input").css({
+          "border":"1px solid #ddd",
+          "position":"relative",
+          "z-index":"2"
+        })
+        $("ul.xiala").css("visibility","hidden")
+      });
+      $(".head .center a").hover(function(){
+        $(".xiala2").css("visibility","visible")
+      },
+      function(){
+        $(".xiala2").css("visibility","hidden")
+      });
+    </script>
+
+
+  </body>
+</html>

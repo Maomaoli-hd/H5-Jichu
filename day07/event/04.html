@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>用on绑定事件,是通用的事件绑定方法　当然，off能解除绑定</title>
+      <style>
+      #divId {
+        width: 200px;
+        height: 100px;
+        background: blue;
+      }
+    </style>
+  </head>
+  <body>
+
+    <button id="btn">按钮</button>
+    <button id="btn2">单击改变div的背景色</button>
+
+    <div id="divId"></div>
+
+    <script src="../jquery.min.js"></script>
+    <script type="text/javascript">
+
+    function handlerOne(){
+      console.log("触发单击 1...");
+    }
+    $("#btn").on('click', handlerOne);
+
+
+    $("#btn").on('click', function () {
+      console.log("click 1....");
+    }).on('click', function(){                    // on方法也可以通过链式绑定多个事件处理函数
+      console.log("click 2....");
+    }).on('dblclick', function () {
+      console.log("dbclick 1....");
+    });
+
+
+    /***************       on能在触发事件用自定义事件，以下为自定义事件的注册和触发         *******************/
+
+    $("#divId").on("changeColor", function(){       //注册自定义的事件
+      $("#divId").css("background-color", "red");
+    });
+
+    $("#btn2").on('click', function(){            //btn2单击时，触发changeColor事件
+      $("#divId").trigger("changeColor");         //trigger触发自定义的事件
+      });
+
+    /****************************  off解除事件的绑定*****************************/
+
+    $("#btn").on('click', function(){
+      console.log("触发单击 2 ...");
+      $("#btn").off('click', handlerOne);     //在单击完后移除指定处理函数，即之前的一个处理函数
+      // $("#btn").off('click');　　 //参数只有事件名称，当然会将该事件上的所有处理函数全都解除绑定了！
+
+      $("#btn").off();    //off没有参数，那么移除该元素上的所有事件的所有函数
+    });
+
+    
+    </script>
+  </body>
+</html>

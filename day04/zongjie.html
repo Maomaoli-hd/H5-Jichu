@@ -29,3 +29,11 @@
 　当然，常见的折叠情况，比如：给排列的元素设置边框，必然会使两个紧挨着的元素中间边框加粗，因为浮动让他们紧紧挨着而又不重叠。重叠来实现显示一条边的宽度：margin-left设置为负的boder。
 　但随之，你要显示一个元素的完整边框，就会出现压着的不显示的情况。通过改变层级即可，position: relative（除默认static）;　z-index: ２（不小于１即可）;<这里position必须一起用才有效果>
 　同一位置定位有两个元素，那当然显示后一个元素，想显示前一个也可以调整其z-index;
+
+8.
+visibility: 元素隐藏，但是仍然占据页面位置
+/*visibility: hidden;
+visibility: visible;*/
+
+display :none; 元素隐藏，并且不占页面位置！！！
+重新设置block，inline， inline-block 再次显示

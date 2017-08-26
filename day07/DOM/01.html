@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery DOM操作－>内部插入</title>
+  </head>
+  <body>
+
+    <!--
+    DOM操作 === 节点操作  === 标签操作  === 元素操作
+    -->
+
+    <div class="one">
+      <h2>我是第一个one</h2>
+    </div>
+    <div class="one"></div>
+
+    <div class="two"></div>
+
+    <div class="three">
+      <h2>three元素</h2>
+    </div>
+
+    <div class="four"></div>
+
+    <script src="../jquery.min.js"></script>
+    <script type="text/javascript">
+
+    /**********************      append -->> 添加到选中元素里边的最后边 ******************************/
+
+    $("body").append("<h1>通过append方法追加到了body的尾部</h1>");
+    $(".one").append("<p>追加的内容</p>");
+
+    $("<h2>appendTo追加</h2>").appendTo(".two");  //appendTo()　倒着来呗！不过我似乎喜欢前面的方式。
+    //$("<p></p>") 理解为创建一个元素。当然之前的那种就是选中一个元素。
+
+    var newElement = $("<a href='https://www.baidu.com'>链接</a>");　　//给一个变量也不错
+    newElement.appendTo(".two");
+
+
+
+    /**********************　　　　prepend -->> 添加到里边的最前面。******************************/
+
+     $(".three").prepend("<p>hello three!!</p>");//字符串类型
+     $(".three").prepend($("<p>three hello</p>"));// jQuery对象类型
+
+     // prependTo 自学  也是倒着来呗。。
+
+
+
+     /**********************　　　　html -->> 修改标签内的内容******************************/
+
+    $(".four").append("<h2></h2>");  //此时h2内容先为空
+    $(".four > h2").html("<span>我是h2</span>"); //html  修改标签里的内容
+    $(".four > h2").html("xxxxx");
+
+
+    </script>
+
+  </body>
+</html>

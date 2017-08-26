@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jichu</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+    //即非数值(Not a Number)是一个特殊的数值,这个数值用于表示一个本来要返回数值的操作数未返回数值的情况(这样就不会抛出错误了)。
+      console.log(typeof NaN);//number
+      console.log(10 * "hello");//NaN
+      console.log(10 * "10");//100
+
+    //isNaN :是不是一个非数值类型的，如果是非数值类型就返回true,如果是数值型就返回flase.
+      console.log(isNaN(10));  //数值，返回false
+      console.log(isNaN(false)); //false为boolean型，也被转换为０，数值型，返回flase.
+      console.log(isNaN("")); //空格，被从字符串转换为０，即数值型，返回flase
+      console.log(isNaN("hello"));  //非数值，返回true.
+
+      var one;//变量没赋值,默认值为 undefined!!!!
+      console.log(one);//undefined
+
+      console.log(Boolean(NaN));//false
+      console.log(Boolean(undefined));//false
+
+      console.log(typeof(null));//object
+
+      var a=null;
+      console.log(typeof(a));//object  对象型
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>uplod a file</title>
+    <style>
+      .upload_button{
+        border: none;
+        background-color: rgb(16, 165, 210);
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        color: white;
+        font-size: 12px;
+      }
+      input[name=upload]{
+        /*position: absolute;
+        top:0;　　　　　　　　　　这个做法是把它设为透明，然后压在上面，所以直接触发的是自己本身。
+        left:0;      　　　　　　　　但是不太好，因为大小和button不完全贴合。
+        opacity:0;*/
+        display: none;　　　　　/*这样让它完全不占位，只有在点击到替身时才会触发它。*/
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button class="upload_button">Upload a file</button>
+      <input type="file" name="upload">
+    </div>
+    <script src="./jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(".upload_button").click(function(){
+        $("input[name=upload]").click();
+      });
+    </script>
+  </body>
+</html>
