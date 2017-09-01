@@ -141,12 +141,20 @@
       top:0;
       z-index: 2;
       border-top: 1px solid #ddd;
-      visibility: hidden;
+      display: none;
+    }
+    .xiala2 ul{
+      height: 100%;
+      width: 100%;
+      display: none;
     }
     .xiala2 li{
       float: left;
       padding: 0 60px;
       border-right: 1px solid #ddd;
+    }
+    .xiala2 ul.active{
+      display: block;
     }
     .hero_top .left{
       width: 230px;
@@ -306,7 +314,17 @@
     <div class="hero w">
       <div class="xiala2">
         <ul>
+          <li>1<img src="./img/max2_toubu.png" alt=""></li>
+          <li><img src="./img/xiaomiNOTE2-320-220!160x110.jpg" alt=""></li>
           <li><img src="./img/max2_toubu.png" alt=""></li>
+        </ul>
+        <ul>
+          <li>2<img src="./img/max2_toubu.png" alt=""></li>
+          <li><img src="./img/xiaomiNOTE2-320-220!160x110.jpg" alt=""></li>
+          <li><img src="./img/max2_toubu.png" alt=""></li>
+        </ul>
+        <ul>
+          <li>3<img src="./img/max2_toubu.png" alt=""></li>
           <li><img src="./img/xiaomiNOTE2-320-220!160x110.jpg" alt=""></li>
           <li><img src="./img/max2_toubu.png" alt=""></li>
         </ul>
@@ -395,12 +413,20 @@
         })
         $("ul.xiala").css("visibility","hidden")
       });
-      $(".head .center a").hover(function(){
-        $(".xiala2").css("visibility","visible")
-      },
-      function(){
-        $(".xiala2").css("visibility","hidden")
+
+      $(".head .center a").each(function(index){     //利用遍历产生索引，之后便于利用索引进行选择
+        $(".head .center a").eq(index).mouseover(function(){
+          $(".xiala2").show();
+          $(".xiala2 ul").eq(index).addClass("active").siblings().removeClass("active");
+          console.log("chansheng");
+        });
       });
+
+      $(".xiala2").mouseleave(function(){        //mouseout会在切换子元素的过程中受到影响，但是mouseleave只对当前元素产生影响！！！！！！！
+        $(this).hide();
+      });
+
+
     </script>
 
 

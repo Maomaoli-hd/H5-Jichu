@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>用css3做各种圆角图标</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .w{
+        width: 1000px;
+        margin: auto;
+      }
+      .bai{
+        float: left;
+        width: 180px;
+        height: 180px;
+        margin: 0 30px 20px 0;
+        box-shadow: 3px 3px 5px 3px #bbb;
+        position: relative;
+        padding: 10px;
+      }
+      .bai:hover{
+        background-color: #ddd;
+      }
+      .bai p{
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+        position: absolute;
+        top:0px;
+        left:0px;
+        display: none;
+        color: white;
+      }
+      .bai .tu{
+        margin: auto;
+      }
+      .one{
+        width: 176px;
+        height: 176px;
+        border: 2px solid red;
+        border-radius:50%;
+      }
+      .two{
+        width: 176px;
+        height: 176px;
+        border: 2px solid red;
+        border-top-left-radius: 50% 40%;
+        border-top-right-radius: 50% 40%;
+      }
+      .three{
+        width: 176px;
+        height: 88px;
+        border: 2px solid red;
+        border-top-left-radius: 50% 100%;
+        border-top-right-radius: 50% 100%;
+      }
+      .four{
+        width: 176px;
+        height: 176px;
+        border: 2px solid red;
+        border-top-left-radius: 40% 40%;
+      }
+      .five{
+        width: 88px;
+        height: 88px;
+        border: 2px solid red;
+        border-top-left-radius: 100% 100%;
+      }
+      .six{
+        width: 176px;
+        height: 88px;
+        border: 2px solid red;
+        border-radius: 50% 50%;
+      }
+      .seven{
+        width: 88px;
+        height: 176px;
+        border: 2px solid red;
+        border-radius: 50% 50%;
+      }
+      .eight{
+        width: 176px;
+        height: 44px;
+        border: 2px solid red;
+        border-top-left-radius: 50% 100%;
+        border-top-right-radius: 50% 100%;
+      }
+      .nine{
+        width: 44px;
+        height: 176px;
+        border: 2px solid red;
+        border-top-left-radius: 100% 50%;
+        border-bottom-left-radius: 100% 50%;
+      }
+      .ten{
+        width: 44px;
+        height: 88px;
+        border: 2px solid red;
+        border-top-left-radius: 100% 100%;
+      }
+      .yuanhuan{
+        box-sizing: border-box;
+        width: 180px;
+        height: 180px;
+        border: 70px solid red;
+        border-radius:50%;
+      }
+      .tongqian{
+        box-sizing: border-box;
+        width: 180px;
+        height: 180px;
+        border: 70px solid red;
+        border-radius:30%;
+      }
+      .huan3{
+        box-sizing: border-box;
+        width: 180px;
+        height: 180px;
+        border: 70px solid red;
+        border-top-left-radius:50%;
+      }
+      .huan4{
+        box-sizing: border-box;
+        width: 180px;
+        height: 180px;
+        border: 70px solid red;
+        border-top-left-radius:50%;
+        border-bottom-right-radius:50%;
+      }
+      .pintu{
+        box-sizing: border-box;
+        border-left: 90px solid yellow;
+        border-top: 90px solid red;
+        border-right: 90px solid blue;
+        border-bottom: 90px solid green;
+      }
+      .pintu2{
+        box-sizing: border-box;
+        border-left: 90px solid yellow;
+        border-top: 90px solid red;
+        border-right: 90px solid white;
+        border-bottom: 90px solid green;
+      }
+      .dazui{
+        box-sizing: border-box;
+        /*border-left: 90px solid red;*/
+        border-top: 90px solid red;
+        border-right: 90px solid white;
+        border-bottom: 90px solid red;
+        border-radius:50%;
+      }
+      .shanzi{
+        box-sizing: border-box;
+        border-left: 90px solid white;
+        border-top: 90px solid white;
+        border-right: 90px solid red;
+        border-bottom: 90px solid white;
+        border-radius:50%;
+      }
+      .two_banyuan{
+        box-sizing: border-box;
+        border-top: 90px solid red;
+        border-bottom: 90px solid green;
+        border-radius:50%;
+      }
+      .bagua{
+        border-top: 90px solid red;
+        border-bottom: 90px solid green;
+        border-radius:50%;
+        position: relative;
+      }
+      .bagua .xiao{
+        position: absolute;
+        box-sizing: border-box;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+      }
+      .bagua .zuo{
+        top:-45px;
+        left:0;
+        background-color: red;
+        border: 40px solid green;
+      }
+      .bagua .you{
+        top:-45px;
+        left:90px;
+        background-color: green;
+        border: 40px solid red;
+      }
+      .duihua{
+        width: 160px;
+        height: 88px;
+        background-color: red;
+        border-radius: 10px 10px;
+        position: relative;
+      }
+      .duihua_xiao{
+        position: absolute;
+        top:10px;
+        left:-12px;
+        box-sizing: border-box;
+        /*border-left: 15px solid white;*/
+        border-top: 15px solid rgba(249, 240, 244, 0);
+        border-right: 15px solid red;
+        border-bottom: 15px solid rgba(249, 240, 244, 0);
+        border-radius:50%;
+      }
+      .suo{
+        box-sizing: border-box;
+        width: 120px;
+        height: 120px;
+        border-left: 80px solid red;
+        border-top: 40px solid red;
+        border-bottom: 40px solid red;
+        border-bottom-right-radius: 50% 50%;
+      }
+      .suo2{
+        box-sizing: border-box;
+        width: 180px;
+        height: 120px;
+        border-left: 80px solid red;
+        border-top: 40px solid red;
+        border-bottom: 40px solid red;
+        border-right: 20px solid red;
+        border-radius:30% 35% 35% 30%/30% 50% 50% 30%;
+      }
+      .duihua2{
+        width: 150px;
+        height: 80px;
+        background-color: red;
+        border-radius: 10px 10px;
+        position: relative;
+
+      }
+      .duihua2_xiao{
+        width: 40px;
+        height: 30px;
+        box-shadow:-12px 12px 0px red;
+        background-color: rgb(255,255,255,0);
+        border-radius: 50% 50%;
+        position: absolute;
+        top:-5px;
+        left:140px;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="w">
+      <div class="bai">
+        <p>正圆</p>
+        <div class="tu one"></div>
+      </div>
+      <div class="bai">
+        <p>土司</p>
+        <div class="tu two"></div>
+      </div>
+      <div class="bai">
+        <p>半圆</p>
+        <div class="tu three"></div>
+      </div>
+      <div class="bai">
+        <p>缺角正方形</p>
+        <div class="tu four"></div>
+      </div>
+      <div class="bai">
+        <p>扇形</p>
+        <div class="tu five"></div>
+      </div>
+      <div class="bai">
+        <p>横椭圆</p>
+        <div class="tu six"></div>
+      </div>
+      <div class="bai">
+        <p>竖椭圆</p>
+        <div class="tu seven"></div>
+      </div>
+      <div class="bai">
+        <p>横半椭圆</p>
+        <div class="tu eight"></div>
+      </div>
+      <div class="bai">
+        <p>竖半椭圆</p>
+        <div class="tu nine"></div>
+      </div>
+      <div class="bai">
+        <p>竖椭圆四分之一</p>
+        <div class="tu ten"></div>
+      </div>
+      <div class="bai">
+        <p>圆环</p>
+        <div class="tu yuanhuan"></div>
+      </div>
+      <div class="bai">
+        <p>铜钱</p>
+        <div class="tu tongqian"></div>
+      </div>
+      <div class="bai">
+        <p>环一角</p>
+        <div class="tu huan3"></div>
+      </div>
+      <div class="bai">
+        <p>叶子</p>
+        <div class="tu huan4"></div>
+      </div>
+      <div class="bai">
+        <p>拼图</p>
+        <div class="tu pintu"></div>
+      </div>
+      <div class="bai">
+        <p>拼图2</p>
+        <div class="tu pintu2"></div>
+      </div>
+      <div class="bai">
+        <p>大嘴</p>
+        <div class="tu dazui"></div>
+      </div>
+      <div class="bai">
+        <p>扇子</p>
+        <div class="tu shanzi"></div>
+      </div>
+      <div class="bai">
+        <p>两色圆</p>
+        <div class="tu two_banyuan"></div>
+      </div>
+      <div class="bai">
+        <p>八卦图</p>
+        <div class="tu bagua">
+          <div class="xiao zuo"></div>
+          <div class="xiao you"></div>
+        </div>
+      </div>
+      <div class="bai">
+        <p>对话框</p>
+        <div class="tu duihua">
+          <div class="duihua_xiao">
+          </div>
+        </div>
+      </div>
+      <div class="bai">
+        <p>奇怪的图形</p>
+        <div class="suo">
+        </div>
+      </div>
+      <div class="bai">
+        <p>奇怪的图形2</p>
+        <div class="suo2">
+        </div>
+      </div>
+      <div class="bai">
+        <p>对话框2</p>
+        <div class="tu duihua2">
+          <div class="duihua2_xiao">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="./jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(".bai").hover(function(){
+        $(this).fide("p").show();
+      },function(){
+
+      });
+    </script>
+  </body>
+</html>

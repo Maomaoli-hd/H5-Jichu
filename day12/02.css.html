@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>输入前显示，文本，字符被选中</title>
+    <style>
+     /*选中第一个字符*/
+     .one::first-letter {　　　　
+       font-size: 50px;
+       font-weight: bolder;
+     }
+
+     /*针对input输入前显示的字，会自动在识别光标后消失，但是只能设置字体的颜色*/
+     .two::-webkit-input-placeholder{　/*浏览器的兼容性问题，需要加前缀来表明浏览器。较麻烦，后期有插件可以自动补全前缀*/
+       color: blue;
+     }
+
+     .two::-ms-input-placeholder {
+       color: blue;
+     }
+
+     .two::-moz-placeholder {
+       color: blue;
+     }
+
+
+     /*selection文本选中时，只能修改color，background-color*/
+     .two::selection {
+       color: red;
+       background: blue;
+     }
+
+    </style>
+  </head>
+  <body>
+
+    <p class="one">我skhjkdkdjkjdkhjdkljhkdjhkldjklhjfdkjhlkfjkjkjkjhkhjk</p>
+
+    <input class="two" type="text" placeholder="邮箱/用户名/手机号">
+
+    <p class="two">
+      skjgksjksdjkjdkhjkdjkdjhjdlhjkdljhlkdjhkdjglkjalkjPKGOWUTOJKGJEGLKDSJG <br>
+      skjgksjksdjkjdkhjkdjkdjhjdlhjkdljhlkdjhkdjglkjalkjPKGOWUTOJKGJEGLKDSJG <br>
+      skjgksjksdjkjdkhjkdjkdjhjdlhjkdljhlkdjhkdjglkjalkjPKGOWUTOJKGJEGLKDSJG <br>
+      skjgksjksdjkjdkhjkdjkdjhjdlhjkdljhlkdjhkdjglkjalkjPKGOWUTOJKGJEGLKDSJG <br>
+      skjgksjksdjkjdkhjkdjkdjhjdlhjkdljhlkdjhkdjglkjalkjPKGOWUTOJKGJEGLKDSJG <br>
+      skjgksjksdjkjdkhjkdjkdjhjdlhjkdljhlkdjhkdjglkjalkjPKGOWUTOJKGJEGLKDSJG <br>
+    </p>
+
+  </body>
+</html>
