@@ -1,15 +1,15 @@
 1.设边框颜色必须设边框样式，如solid
 2.清除浮动的通用方法：
-  使用伪元素-->
+  （1）使用伪元素-->
 .clearfix::before,
 .clearfix::after {
-
   clear: both;
   display: block;
   content: " ";
 }
-  在父级引用class：clearfix 即可。
-
+  在父级引用class：clearfix 即可。即浮动的一堆盒子所在的高度为0的大盒子。
+  （2）直接在同级的下一个元素上加一个clear:both（left）;属性即可。
+  
 3.当内容有超出容器的嫌疑，可以给容器加一个overflow: auto;　　/*自动根据内容决定是否显示滚动条*/
 
 4.display:当想改变块儿和行的缺点时,可以设置display:inline-block ,既可以像块一样设置宽高，又可以像行一样可以让后面的元素跟在后面。
