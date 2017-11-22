@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>360导航top</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      a{
+        text-decoration: none;
+      }
+      ul li{
+        list-style: none;
+      }
+      .top{
+        height: 80px;
+        background: url("./img/banner.jpg") no-repeat;
+      }
+      .w{
+        width: 1240px;
+        margin: 0 auto;
+      }
+      .daohang{
+        height: 36px;
+        background-color: #ddd;
+        font-size: 12px;
+        color: #aaa;
+      }
+      .zuo{
+        float: left;
+      }
+      .you{
+        float: right;
+        position: relative;
+      }
+      .you span{
+        position: absolute;
+        width: 26px;
+        height: 20px;
+        background: url("./img/head-icons.png") no-repeat 0 -268px;
+        top:10px;
+        left:167px;
+      }
+      ul{
+        float: left;
+      }
+      ul li{
+        margin: 0 10px;
+        height: 36px;
+        line-height: 36px;
+        float: left;
+      }
+      ul.youyou li{
+        margin: 0 20px;
+      }
+      ul li a{
+        color: #888;
+      }
+      ul li a:hover{
+        color: green;
+      }
+      .sousou{
+        padding-top: 30px;
+      }
+      .logo{
+        height: 40px;
+        width: 150px;
+        float: left;
+        margin-top: 10px;
+        background: url("./img/360logo.png") no-repeat;
+        background-size: 150px 40px;
+
+      }
+      .ss_you{
+        float: right;
+        margin-right: 125px;
+        position: relative;
+      }
+      .ss_you span{
+        position: absolute;
+        width: 72px;
+        height: 70px;
+        background: url("./img/erwei.png") no-repeat;
+        top:-18px;
+        left:769px;
+      }
+      .ss{
+        border-right: 30px;
+        float: left;
+        margin-right: 35px;
+        overflow: hidden;
+        position: relative;
+      }
+      .ss span{
+        position: absolute;
+        width: 26px;
+        height: 20px;
+        background: url("./img/head-icons.png") no-repeat 0 -121px;
+        top:12px;
+        left:489px;
+      }
+      .ss_kuang{
+        width: 450px;
+        height: 40px;
+        border: 1px solid #23ac38;
+        padding-left: 15px;
+        color: #aaa;
+        font-size: 14px;
+        float: left;
+        line-height: 40px;
+      }
+      .ss_button{
+        width: 70px;
+        height: 42px;
+        background-color: #23ac38;
+        float: left;
+      }
+      .car{
+        border: 1px solid #ddd;
+        width: 140px;
+        height: 42px;
+        background-color: #eee;
+        font-size: 12px;
+        float: left;
+        line-height: 42px;
+        text-align: center;
+        position: relative;
+        padding-left: 15px;
+      }
+      .car span{
+        position: absolute;
+        width: 26px;
+        height: 20px;
+        background: url("./img/head-icons.png") no-repeat 0 0px;
+        top:13px;
+        left:22px;
+      }
+      .searchkey li{
+        margin: 7px 10px 0 0;
+        height: 21px;
+        line-height: 21px;
+      }
+      .searchkey li a{
+        color: #aaa;
+        font-size: 12px;
+      }
+      .navbox{
+        margin-top: 20px;
+        position: relative;
+      }
+      .navbox span{
+        position: absolute;
+        width: 26px;
+        height: 20px;
+        background: url("./img/head-icons.png") no-repeat 0 -304px;
+        top:9px;
+        left:27px;
+      }
+      .navbox li#top{
+        background-color: rgb(36, 31, 27);
+        width: 210px;
+        height: 37px;
+        color: white;
+        font-size: 16px;
+        margin: 0 30px 0 0;
+        text-align: center;
+      }
+      .navbox li a{
+        font-size: 16px;
+        color: #555;
+      }
+      .clearfix::after,
+      .clearfix::before{
+        content: " ";
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+    </div>
+    <div class="daohang">
+      <div class="w">
+        <div class="zuo">
+          <ul>
+            <li><a href="#">帮助中心</a></li>
+            <li><a href="#">收藏本站</a></li>
+          </ul>
+        </div>
+        <div class="you">
+          <ul>
+            <li><a href="#">登录</a></li>
+            <li><a href="#">注册</a></li>
+          </ul>
+          <ul class="youyou">
+            <li><a href="#">我的订单</a></li>
+            <li><a href="#">手机360商城</a></li>
+          </ul>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <div class="sousou w clearfix">
+      <div class="logo">
+      </div>
+      <div class="ss_you">
+        <div class="ss">
+          <div class="ss_kuang">
+            vizza小镇蓝
+          </div>
+          <div class="ss_button">
+          </div>
+          <span></span>
+        </div>
+        <div class="car">
+          我的购物车（0）
+          <span></span>
+        </div>
+        <div class="searchkey">
+          <ul>
+            <li><a href="#">S650</a></li>
+            <li><a href="#">6W</a></li>
+            <li><a href="#">N5S</a></li>
+            <li><a href="#">摄像机云台版</a></li>
+            <li><a href="#">插线板快充</a></li>
+          </ul>
+        </div>
+        <span></span>
+      </div>
+    </div>
+    <div class="navbox w">
+      <ul>
+        <li id="top">全部智能酷品</li>
+        <li><a href="">手机</a></li>
+        <li><a href="">行车记录仪</a></li>
+        <li><a href="">儿童手表</a></li>
+        <li><a href="">摄像机</a></li>
+        <li><a href="">路由器</a></li>
+        <li><a href="">二手手机</a></li>
+        <li><a href="">社区</a></li>
+        <li><a href="">游戏权益中心</a></li>
+      </ul>
+      <span></span>
+    </div>
+  </body>
+</html>
