@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>京东页面</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      ul li{
+        list-style: none;
+      }
+      a{
+        text-decoration: none;
+      }
+      body{
+        background-color: #f6f6f6;
+      }
+      .w{
+        width: 1190px;
+        margin: 0 auto;
+        position: relative;
+      }
+      .logo{
+        position: absolute;
+        width: 190px;
+        height: 170px;
+        -webkit-box-shadow: 0 0 10px #aaa;
+        background:url("./img/logo.v3.jpg") no-repeat;
+        top:1px;
+        left:0px;
+      }
+      .position_logo{
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background:url("./img/map.png") no-repeat;
+        background-size: 15px 15px;
+        top:6px;
+        left:210px;
+      }
+      .clearfix::after,
+      .clearfix::before{
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .top{
+        height: 80px;
+        background-color: #121212;
+      }
+      .top_img{
+        height: 80px;
+        background: url("./img/5a0d6cceNaffbf9af.jpg") no-repeat;
+      }
+      .daohang{
+        height: 31px;
+        background-color: #e3e4e5;
+        border-bottom: 1px solid #ddd;
+        font-size: 12px;
+        line-height: 31px;
+        color: #aaa;
+      }
+
+      .zuo{
+        float: left;
+        margin-left:230px;
+      }
+      .you{
+        float: right;
+      }
+      .you ul li{
+        margin-top: 10px;
+        float: left;
+        height: 12px;
+        line-height: 12px;
+        padding: 0 12px;
+        border-right: 1px solid #ccc;
+      }
+      .you ul li a{
+        color: #aaa;
+      }
+      ul li a:hover{
+        color: #f10215;
+      }
+      .all_nav{
+        height: 138px;
+      }
+      .search{
+        float: right;
+        padding-top: 25px;
+        position: relative;
+      }
+      .search span{
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background: url("./img/59a51bf6Nb8e478cc.png") no-repeat 2px 2px;
+        background-size: 60px 60px;
+        top:3px;
+        left:800px;
+      }
+      .ss{
+        float: left;
+        margin-right: 35px;
+
+      }
+      .ss_kuang{
+        float:left;
+        border: 1px solid #f10215;
+        width: 460px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 14px;
+        color: #aaa;
+        padding-left: 15px;
+      }
+      .ss_button{
+        float: left;
+        width: 50px;
+        height: 37px;
+        background-color: #f10215;
+        position: relative;
+      }
+      .ss_button span{
+        position: absolute;
+        width: 27px;
+        height: 27px;
+        background: url("./img/search.png") no-repeat;
+        background-size: 27px 27px;
+        top:6px;
+        left:10px;
+      }
+      .car{
+        width: 120px;
+        height: 35px;
+        line-height: 35px;
+        border: 1px solid #ddd;
+        float: left;
+        margin-right:110px;
+        background-color: #fff;
+        color: #f10215;
+        font-size: 12px;
+        padding-left: 75px;
+        position: relative;
+      }
+      .car span{
+        position: absolute;
+        width: 27px;
+        height: 27px;
+        background: url("./img/car.png") no-repeat;
+        top:7px;
+        left:46px;
+      }
+      .car span#span2{
+        position: absolute;
+        width: 27px;
+        height: 27px;
+        background: url("./img/红0.png") no-repeat;
+        top:7px;
+        left:135px;
+      }
+      .search ul li a{
+        margin-top: 9px;
+        margin-right: 10px;
+        float: left;
+        height: 12px;
+        line-height: 12px;
+        font-size: 12px;
+        color: #999;
+      }
+      ul li a:hover{
+        color: #f10215;
+      }
+      .nav{
+        padding-top: 24px;
+        margin-left: 230px;
+        clear:right;
+        position: relative;
+      }
+      .nav li{
+        float: left;
+      }
+      .nav li span{
+        display: inline-block;
+        width: 1px;
+        height: 10px;
+        margin-top: 8px;
+        border-right: 1px solid #bbb;
+      }
+      .nav li a{
+        float: left;
+        padding: 0 15px;
+        color: #555;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .paizi{
+        position: absolute;
+        background: url("./img/5a0d6d81Nbf26961f.png") no-repeat;
+        width: 190px;
+        height: 40px;
+        top:9px;
+        left:770px;
+      }
+      .show .left{
+        float: left;
+        width: 166px;
+        height: 446px;
+        background-color: #6e6568;
+        padding: 16px 12px;
+      }
+      .show .left li{
+        height: 28px;
+      }
+      .show .left a{
+        font-size: 14px;
+        color: white;
+      }
+      .show .left a:hover{
+        color: #f10215;
+      }
+      .show .left li span{
+        color: white;
+        margin: 0 5px;
+        font-size: 13px;
+        font-weight: bold;
+      }
+      .show .center{
+        float: left;
+        background: url("./img/banner.png") no-repeat;
+        width: 788px;
+        height: 477px;
+        margin:0 10px;
+      }
+      .show .right{
+        float: left;
+      }
+      .show .right_top{
+        width: 160px;
+        height: 116px;
+        background-color: white;
+        padding: 0 15px;
+      }
+      .show .right_top .user{
+        height: 45px;
+        padding: 15px 0 15px 54px;
+        font-size: 12px;
+        color: #888;
+        position: relative;
+      }
+      .show .user span{
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background: url("./img/no_login.jpg") no-repeat;
+        background-size: 40px 40px;
+        top:18px;
+        left:5px;
+        border-radius: 20px;
+
+      }
+      .right_top .user p{
+        padding-top: 6px;
+      }
+      .right_top .user a{
+        color:#888;
+      }
+      .user p a:hover{
+        color: #f10215;
+      }
+      .right_top .user_button a{
+        color: #f10215;
+        font-size: 12px;
+        display: inline-block;
+        border: 2px solid #f10215;
+        height: 20px;
+        line-height: 20px;
+        width: 68px;
+        text-align: center;
+      }
+      .show .right_center{
+        margin-top: 2px;
+        height: 154px;
+        width: 160px;
+        background-color:white;
+        padding: 0 15px;
+      }
+      .right_center .head {
+        border-bottom: 1px solid #ddd;
+        height: 14px;
+        padding: 8px 0 7px 0;
+        position: relative;
+      }
+      .right_center .head span{
+        position: absolute;
+        width: 27px;
+        height: 2px;
+        background-color: red;
+        top:28px;
+        left:0px;
+      }
+      .right_center .head a{
+        color: #333;
+        font-size: 12px;
+      }
+      .head a:hover{
+        color: #f10215;
+      }
+      .right_center .content{
+        padding: 12px 0;
+      }
+      .right_center .content li{
+        height: 24px;
+        line-height: 24px;
+        width: 160px;
+        font-size: 12px;
+      }
+      .right_center .content li a{
+        color: #666;
+      }
+      .right_center .content li a:hover{
+        color: #f10215;
+      }
+      .show .right_bottom{
+        height: 205px;
+        background-color:white;
+      }
+      td{
+        border: 1px solid;
+        text-align: center;
+        height: 67px;
+        border-color: rgb(240,240,240);
+        font-size: 10px;
+        color: #666;
+      }
+      table{
+        width: 190px;
+        border-spacing: 0px;
+        border-collapse: separate;
+        background-color: white;
+      }
+      .jinglintu{
+        width: 23px;
+        height: 22px;
+        margin: auto;
+      }
+      .jinglintu1 {
+        background: url("./img/sprite.png") -0px -88px;
+      }
+      .jinglintu2 {
+        background: url("./img/sprite.png") -0px -46px;
+      }
+      .jinglintu3 {
+        background: url("./img/sprite.png") -44px -88px;
+      }
+      .jinglintu4 {
+        background: url("./img/sprite.png") -88px -0px;
+      }
+      .jinglintu5 {
+        background: url("./img/sprite.png") -88px -46px;
+      }
+      .jinglintu6 {
+        background: url("./img/sprite.png") -0px -0px;
+      }
+      .jinglintu7 {
+        background: url("./img/sprite.png") -44px -46px;
+      }
+      .jinglintu8 {
+        background: url("./img/sprite.png") -88px -88px;
+      }
+      .jinglintu9 {
+        background: url("./img/sprite.png") -132px -0px;
+      }
+      .jinglintu10 {
+        background: url("./img/sprite.png") -132px -46px;
+      }
+      .jinglintu11 {
+        background: url("./img/sprite.png") -132px -90px;
+      }
+      .jinglintu12 {
+        background: url("./img/sprite.png") -44px -0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <div class="w top_img"></div>
+    </div>
+    <div class="daohang">
+      <div class="w">
+        <div class="logo">
+        </div>
+        <div class="position_logo">
+        </div>
+        <div class="zuo">
+          北京
+        </div>
+        <div class="you">
+          <ul>
+            <li><a href="#">你好，请登录</a>&nbsp;&nbsp;<a href="#" style="color:red;">免费注册</a></li>
+            <li><a href="#">我的订单</a></li>
+            <li><a href="#">我的京东</a></li>
+            <li><a href="#">京东会员</a></li>
+            <li><a href="#">企业导购</a></li>
+            <li><a href="#">客户服务</a></li>
+            <li><a href="#">网站导航</a></li>
+            <li style="border:none"><a href="#">手机京东</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="all_nav w">
+      <div class="search">
+        <div class="ss">
+          <div class="ss_kuang">
+            格力变频空调
+          </div>
+          <div class="ss_button">
+            <span></span>
+          </div>
+        </div>
+        <div class="car">
+          我的购物车
+          <span></span>
+          <span id="span2"></span>
+        </div>
+        <span style="padding: 2px;border: 1px solid #ddd;"></span>
+        <ul>
+          <li><a href="#" style="color:#f10215">低至5折</a></li>
+          <li><a href="#">神舟超品</a></li>
+          <li><a href="#">1元兽药</a></li>
+          <li><a href="#">潮童保暖</a></li>
+          <li><a href="#">4k电视</a></li>
+          <li><a href="#">黄金项链</a></li>
+          <li><a href="#">电脑桌</a></li>
+          <li><a href="#">山姆回馈</a></li>
+          <li><a href="#">燃气热水器</a></li>
+        </ul>
+      </div>
+      <div class="nav">
+        <ul>
+          <li>
+            <a href="">秒杀</a>
+            <a href="">优惠券</a>
+            <a href="">闪购</a>
+            <a href="">拍卖</a>
+          </li>
+          <li><span></span></li>
+          <li>
+            <a href="">京东服饰</a>
+            <a href="">京东超市</a>
+            <a href="">生鲜</a>
+            <a href="">全球购</a>
+          </li>
+          <li><span></span></li>
+          <li><a href="#">京东金融</a></li>
+        </ul>
+        <div class="paizi">
+        </div>
+      </div>
+    </div>
+    <div class="show w">
+      <div class="left">
+        <ul>
+          <li><a href="">家用电器</a></li>
+          <li><a href="">手机</a><span>/</span><a href="">运营商</a></li>
+          <li><a href="">电脑</a><span>/</span><a href="">办公</a></li>
+          <li><a href="">家具</a><span>/</span><a href="">家装</a><span>/</span><a href="#">厨具</a><span>/</span><a href="#">家居</a></li>
+          <li><a href="">男装</a><span>/</span><a href="">女装</a><span>/</span><a href="#">内衣</a></li>
+          <li><a href="">美装个护</a><span>/</span><a href="">宠物</a></li>
+          <li><a href="">女装</a><span>/</span><a href="#">箱包</a><span>/</span><a href="">珠宝</a><span>/</span><a href="#">箱包</a></li>
+          <li><a href="">男鞋</a><span>/</span><a href="">运动</a></li>
+          <li><a href="">汽车</a><span>/</span><a href="">汽车用品</a></li>
+          <li><a href="">母婴</a><span>/</span><a href="">玩具乐器</a></li>
+          <li><a href="">生鲜</a><span>/</span><a href="">特产</a></li>
+          <li><a href="">礼品鲜花</a><span>/</span><a href="">农资绿植</a></li>
+          <li><a href="">医药保健</a><span>/</span><a href="">计生情趣</a></li>
+          <li><a href="">图书</a><span>/</span><a href="">电子书</a></li>
+          <li><a href="">机票</a><span>/</span><a href="">酒店</a><span>/</span><a href="#">生活</a></li>
+          <li><a href="">理财</a><span>/</span><a href="">众筹</a><span>/</span><a href="#">保险</a></li>
+        </ul>
+      </div>
+      <div class="center">
+      </div>
+      <div class="right">
+        <div class="right_top">
+          <div class="user">
+            Hi,欢迎来到京东！
+            <p>
+              <a href="#">登录</a>
+              <a href="#">注册</a>
+            </p>
+            <span></span>
+          </div>
+          <div class="user_button">
+            <a href="#" style="margin-right: 10px;">新人福利</a>
+            <a href="#">PLUS会员</a>
+          </div>
+        </div>
+        <div class="right_center">
+          <div class="head">
+            <a href="#" style="border-right:1px solid #dfe0e1;padding-right:12px;">促销</a>
+            <span></span>
+            <a href="#" style="padding-left:12px;">公告</a>
+            <a href="#" style="display:block;float:right;">更多</a>
+          </div>
+          <div class="content">
+            <ul>
+              <li><a href="">关于召回普利司通..</a></li>
+              <li><a href="">京东物流推出配送员统一...</a></li>
+              <li><a href="">天府大件运营中心开仓公告</a></li>
+              <li><a href="">京东大件物流“送装一体”</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="right_bottom">
+          <table>
+            <tr>
+              <td><div class="jinglintu jinglintu1"></div>话费</td>
+              <td><div class="jinglintu jinglintu2"></div>机票</td>
+              <td><div class="jinglintu jinglintu3"></div>酒店</td>
+              <td><div class="jinglintu jinglintu4"></div>游戏</td>
+            </tr>
+            <t>
+              <td><div class="jinglintu jinglintu5"></div>企业购</td>
+              <td><div class="jinglintu6 jinglintu"></div>加油卡</td>
+              <td><div class="jinglintu7 jinglintu"></div>电影票</td>
+              <td><div class="jinglintu8 jinglintu"></div>火车票</td>
+            </tr>
+            <tr>
+              <td><div class="jinglintu9 jinglintu"></div>众筹</td>
+              <td><div class="jinglintu10 jinglintu"></div>理财</td>
+              <td><div class="jinglintu11 jinglintu"></div>礼品卡</td>
+              <td><div class="jinglintu12 jinglintu"></div>白条</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
